@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Card Detector</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/2.1.1/tesseract.min.js"></script>
+    <script src="cardd.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Identity Card Detector</h1>
+        <div id="cameraSection" style="display: none;">
+            <video id="videoElement" autoplay></video>
+            <button id="capturePhoto">Capture Image</button>
+            <button id="switchCamera">Switch Camera</button>
+            <button id="stopDetection">Stop Detection</button>
+            <button id="cancelProcess">Cancel</button>
+        </div>
+        <div id="resultSection" style="display: none;">
+            <h2>Captured Image:</h2>
+            <img id="capturedPhoto" style="display: none; max-width: 100%; border: 1px solid #ccc;">
+            <p id="cardTypeResult">No card detected</p>
+            <input type="text" id="cardNumber" placeholder="Enter card number manually" />
+            <button id="manualDetect">Manual Detect</button>
+        </div>
+        <button id="startDetection">Start Detecting</button>
+    </div>
+</body>
+</html>
